@@ -13,6 +13,7 @@
         <title>JSP Page</title>
     </head>
     <body>
+        ${sessionScope.account.username}
         <form action="update" method="post">
             Student ID: <input value="${s.stuId}" type="text" name="stuId" readonly/><br/>
             Student name: <input value="${s.stuName}" type="text" name="stuName"/><br/>

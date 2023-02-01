@@ -13,6 +13,7 @@
         <title>JSP Page</title>
     </head>
     <body>
+        ${sessionScope.account.username}
         <form action="create" method="POST">
             Name: <input type="text" name="stuName"/> <br/>
             Gender: <input type="radio" checked="checked" value="male" name="gender"/> Male

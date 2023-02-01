@@ -1,9 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
 package Controller.student;
 
+import Controller.authentication.BaseAuthenticationController;
 import DAL.DepartmentDBContext;
 import DAL.StudentDBContext;
 import Model.Department;
@@ -21,7 +18,7 @@ import java.util.ArrayList;
  *
  * @author tungtn
  */
-public class AddController extends HttpServlet {
+public class AddController extends BaseAuthenticationController {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -46,7 +43,7 @@ public class AddController extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected void processGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         DepartmentDBContext deptdb = new DepartmentDBContext();
         ArrayList<Department> depts = deptdb.list();
@@ -63,7 +60,7 @@ public class AddController extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    protected void processPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         Department d = new Department();
         d.setDeptId(Integer.parseInt(request.getParameter("deptId")));

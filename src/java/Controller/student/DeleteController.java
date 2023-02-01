@@ -1,9 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
 package Controller.student;
 
+import Controller.authentication.BaseAuthenticationController;
 import DAL.StudentDBContext;
 import java.io.IOException;
 import jakarta.servlet.ServletException;
@@ -15,7 +12,7 @@ import jakarta.servlet.http.HttpServletResponse;
  *
  * @author tungtn
  */
-public class DeleteController extends HttpServlet {
+public class DeleteController extends BaseAuthenticationController {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,7 +34,7 @@ public class DeleteController extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected void processGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         int stuId = Integer.parseInt(request.getParameter("stuId"));
         StudentDBContext studb = new StudentDBContext();
@@ -54,7 +51,7 @@ public class DeleteController extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    protected void processPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
     }
 

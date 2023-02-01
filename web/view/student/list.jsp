@@ -18,6 +18,8 @@
         }
     </script>
     <body>
+        <c:if test="${sessionScope.account.username eq null}"><a href="../login">Login</a></c:if>
+        <c:if test="${sessionScope.account.username ne null}">${sessionScope.account.username} <a href="../logout">Logout</a></c:if>
         <form method="get" id="formSearch">
             Department: <select name="deptId" onchange="submitForm();">
                 <option value="0">-----ALL-----</option>

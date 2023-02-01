@@ -9,4 +9,4 @@ Basic CRUD + session exercise with Students database.
 
 I will try to add comments when I'm done with the permissions and departments updates :D
 
-This was done on Windows 10 22H2, Opera GX Browser, Apache NetBeans 13 with TomCat 10.0; and SSMS 19.
+This was done on Windows 10 22H2; Opera GX Browser; Apache NetBeans 13 with TomCat 10.0 and JDK 1.8; JDBC 4.2 and JSTL 2.0.0; and SSMS 19.

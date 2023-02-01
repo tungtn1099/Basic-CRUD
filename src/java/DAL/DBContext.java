@@ -1,3 +1,7 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package DAL;
 
 import Model.BaseModel;
@@ -18,9 +22,9 @@ public abstract class DBContext<T extends BaseModel> {
     public DBContext()
     {
         try {
-            String user = "";
-            String pass = "";
-            String url = "";
+            String user = "tungtn1";
+            String pass = "12345";
+            String url = "jdbc:sqlserver://DESKTOP-Q1QG6EI\\SQLEXPRESS:1433;databaseName=BasicCRUD";
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             connection = DriverManager.getConnection(url, user, pass);
         } catch (ClassNotFoundException | SQLException ex) {
